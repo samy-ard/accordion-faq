@@ -1,4 +1,216 @@
-@import "_fonts.css";
-@import "./_reset.css";
-@import "_content.css";
-@import "_responsive.css";
+@font-face {
+	font-family: "WorkSans";
+	src: url('./../fonts/WorkSans-VariableFont_wght.ttf');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "WorkSans";
+	src: url('./../fonts/WorkSans-Italic-VariableFont_wght.ttf');
+	font-style: italic;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--white: 				hsl(0, 0%, 100%);
+	--pink: 				hsl(275, 100%, 97%);
+	--light-purple: hsl(292, 16%, 49%);
+	--dark-purple: 	hsl(292, 42%, 14%);
+	--purple: 			hsl(281, 83%, 54%);
+	--text-color: 	var(--light-purple);
+	--main-bkg: 		var(--pink);
+	--faq-bkg: 			var(--white);
+}
+
+html {
+	font-family: "WorkSans", sans-serif;
+	font-size: 16px;
+	line-height: 1.25;
+	color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	margin: 0 0 1em;
+	color: var(--dark-purple);
+}
+
+h1, .h1 {
+	font-size: 2rem;
+}
+
+h2, .h2 {
+	font-size: ;
+}
+
+h3, .h3 {
+	font-size: ;
+}
+
+h4, .h4 {
+	font-size: 1rem;
+}
+
+h5, .h5 {
+	font-size: ;
+}
+
+h6, .h6 {
+	font-size: ;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+.main {
+	position: relative;
+	padding: 8.875rem 1.4375rem;
+	background-color: var(--main-bkg);
+	min-height: 100vh;
+}
+
+.page-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	height: 14.5rem;
+	background-size: cover;
+	background-position: center;
+	background-image: url('./../images/background-pattern-mobile.svg');
+}
+
+.page-content {
+	position: relative;
+	border-radius: 0.5rem;
+	padding-top: 1.5rem;
+	padding-inline: 1.5625rem;
+	background-color: var(--faq-bkg);
+	z-index: 10;
+}
+
+.page-title {
+	position: relative;
+	padding-left: 3rem;
+	line-height: 1.125;
+	margin-bottom: 0.1875rem;
+}
+
+.page-title::before {
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('./../images/icon-star.svg');
+}
+
+.accordion-item {
+	overflow: hidden;
+	padding-top: 1.375rem;
+}
+
+.accordion-item:not(:first-child) {
+	border-top: 1px solid var(--pink);
+}
+
+.accordion-title {
+	position: relative;
+	cursor: pointer;
+	padding-right: 3.5rem;
+	margin-bottom: 1.375rem;
+}
+
+.accordion-title::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 30px;
+	height: 31px;
+	transform: translateY(-50%);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('./../images/icon-plus.svg');
+}
+
+.accordion-title:hover, .accordion-title:focus {
+	color: var(--purple);
+}
+
+.accordion-item.open .accordion-title::after {
+	background-image: url('./../images/icon-minus.svg');
+}
+
+.accordion-content {
+	font-size: 0.875rem;
+	line-height: 1.5;
+	margin-bottom: 0;
+	height: 0;
+}
+
+.accordion-item.open .accordion-content {
+	margin-bottom: 1.5rem;
+	height: auto;
+}
+
+@media screen and (min-width: 992px) {
+	h1, .h1 {
+		font-size: 3.5rem;
+	}
+
+	h4, .h4 {
+		font-size: 1.125rem;
+	}
+
+	.main {
+		padding: 10.5rem 0;
+	}
+
+	.page-top {
+		height: 20em;
+		background-image: url('./../images/background-pattern-desktop.svg');
+	}
+
+	.page-content {
+		margin-inline: auto;
+		padding: 2.5rem 2.5rem 1rem;
+		max-width: 37.375rem;
+	}
+
+	.page-title {
+		padding-left: 3.9375rem;
+		margin-bottom: 0.625rem;
+	}
+
+	.page-title::before {
+		top: 0.75rem;
+		width: 2.5rem;
+		height: 2.625rem;
+	}
+
+	.accordion-item {
+		padding-top: 1.6875rem;
+	}
+
+	.accordion-title {
+		margin-bottom: 1.6875rem;
+		line-height: 1.33333;
+	}
+
+	.accordion-content {
+		font-size: 1rem;
+	}
+}
