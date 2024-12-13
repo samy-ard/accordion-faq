@@ -1,0 +1,57 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--white: 				hsl(0, 0%, 100%);
+	--pink: 				hsl(275, 100%, 97%);
+	--light-purple: hsl(292, 16%, 49%);
+	--dark-purple: 	hsl(292, 42%, 14%);
+	--purple: 			hsl(281, 83%, 54%);
+	--text-color: 	var(--light-purple);
+	--main-bkg: 		var(--pink);
+	--faq-bkg: 			var(--white);
+}
+
+html {
+	font-family: "WorkSans", sans-serif;
+	font-size: 16px;
+	line-height: 1.25;
+	color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	margin: 0 0 1em;
+	color: var(--dark-purple);
+}
+
+h1, .h1 {
+	font-size: 2rem;
+}
+
+h2, .h2 {
+	font-size: ;
+}
+
+h3, .h3 {
+	font-size: ;
+}
+
+h4, .h4 {
+	font-size: 1rem;
+}
+
+h5, .h5 {
+	font-size: ;
+}
+
+h6, .h6 {
+	font-size: ;
+}
+
+p {
+	margin: 0 0 1em;
+}

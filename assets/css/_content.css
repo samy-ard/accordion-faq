@@ -1,0 +1,97 @@
+.main {
+	position: relative;
+	padding: 8.875rem 1.4375rem;
+	background-color: var(--main-bkg);
+	min-height: 100vh;
+}
+
+.page-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	height: 14.5rem;
+	background-size: cover;
+	background-position: center;
+	background-image: url('./../images/background-pattern-mobile.svg');
+}
+
+.page-content {
+	position: relative;
+	border-radius: 0.5rem;
+	padding-top: 1.5rem;
+	padding-inline: 1.5625rem;
+	background-color: var(--faq-bkg);
+	z-index: 10;
+}
+
+.page-title {
+	position: relative;
+	padding-left: 3rem;
+	line-height: 1.125;
+	margin-bottom: 0.1875rem;
+}
+
+.page-title::before {
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('./../images/icon-star.svg');
+}
+
+.accordion-item {
+	overflow: hidden;
+	padding-top: 1.375rem;
+}
+
+.accordion-item:not(:first-child) {
+	border-top: 1px solid var(--pink);
+}
+
+.accordion-title {
+	position: relative;
+	cursor: pointer;
+	padding-right: 3.5rem;
+	margin-bottom: 1.375rem;
+}
+
+.accordion-title::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 30px;
+	height: 31px;
+	transform: translateY(-50%);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url('./../images/icon-plus.svg');
+}
+
+.accordion-title:hover, .accordion-title:focus {
+	color: var(--purple);
+}
+
+.accordion-item.open .accordion-title::after {
+	background-image: url('./../images/icon-minus.svg');
+}
+
+.accordion-content {
+	font-size: 0.875rem;
+	line-height: 1.5;
+	margin-bottom: 0;
+	height: 0;
+}
+
+.accordion-item.open .accordion-content {
+	margin-bottom: 1.5rem;
+	height: auto;
+}
