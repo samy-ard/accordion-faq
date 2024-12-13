@@ -1,4 +1,4 @@
 @import "_fonts.css";
-@import "_reset.css";
+@import "./_reset.css";
 @import "_content.css";
 @import "_responsive.css";
